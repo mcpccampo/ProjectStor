@@ -43,8 +43,8 @@ module.exports = {
     const { id } = req.params;
     const { name, group, url } = req.body;
 
-    console.log(` :: Param Id: ${id}`);
-    console.log(` :: Body ${name},${group},${url}`);
+    // console.log(` :: Param Id: ${id}`);
+    // console.log(` :: Body ${name},${group},${url}`);
 
     let index = data.findIndex((e) => e.id === parseInt(id));
 
@@ -64,5 +64,19 @@ module.exports = {
       console.log(' :: Could not update record');
     }
   },
-  delete: (req, res) => {},
+  delete: (req, res) => {
+    console.log('~>Reached the Delete EndPoint');
+
+    const { id } = req.params;
+    const index = data.findIndex((e) => e.id === parseInt(id));
+
+    if (index >= 0) {
+      data.splice(index, 1);
+      res.status(200).send(data);
+      console.log(' :: Deleted Record: ', index);
+    } else {
+      res.sendStatus(404);
+      console.log(' :: Record Not Found');
+    }
+  },
 };
