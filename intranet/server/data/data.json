@@ -2,61 +2,61 @@
   {
     "id": 0,
     "name": "Git Hub",
-    "group": "Dev",
+    "group": "Resources",
     "url": "https://github.com/"
   },
   {
     "id": 1,
     "name": "MDN JS Library",
-    "group": "Dev",
+    "group": "Resources",
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects"
   },
   {
     "id": 2,
     "name": "BootStrap Docs",
-    "group": "Dev",
+    "group": "Resources",
     "url": "https://getbootstrap.com/docs/5.0/getting-started/introduction/"
   },
   {
     "id": 3,
     "name": "TailWindCss Docs",
-    "group": "Dev",
+    "group": "Resources",
     "url": " https://tailwindcss.com/docs"
   },
   {
     "id": 4,
     "name": "React Docs",
-    "group": "Dev",
+    "group": "Resources",
     "url": "https://reactjs.org/docs/getting-started.html"
   },
   {
     "id": 5,
     "name": "Express Boilerplate",
-    "group": "Dev",
+    "group": "Resources",
     "url": "https://bit.ly/3bpsZtC"
   },
   {
     "id": 6,
     "name": "DevDocs",
-    "group": "Dev",
+    "group": "Resources",
     "url": "https://devdocs.io/"
   },
   {
     "id": 7,
     "name": "Dev Community",
-    "group": "Dev",
+    "group": "Blogs",
     "url": "https://dev.to/"
   },
   {
     "id": 8,
     "name": "FrontEnd Mentor Challenges",
-    "group": "Dev",
+    "group": "Tutorials",
     "url": "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp"
   },
   {
     "id": 9,
     "name": "Brad Traversy",
-    "group": "Dev",
+    "group": "Tutorials",
     "url": "https://www.youtube.com/c/TraversyMedia/videos"
   }
 ]

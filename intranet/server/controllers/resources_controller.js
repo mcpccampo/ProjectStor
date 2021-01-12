@@ -1,9 +1,20 @@
 const e = require('express');
 const data = require('../data/data.json');
-const id = data.length + 1;
+let id = data.length + 1;
 
 module.exports = {
-  create: (req, res) => {},
+  create: (req, res) => {
+    console.log('~>Reached the Create EndPoint');
+
+    let { name, group, url } = req.body;
+    let record = { id, name, group, url };
+
+    data.push(record);
+    id++;
+
+    console.log(` :: Added Record ${record}`);
+    res.status(200).send(data);
+  },
   read: (req, res) => {
     console.log('~>Reached the Read EndPoint');
     res.status(200).send(data);
@@ -26,6 +37,32 @@ module.exports = {
       }
     }
   },
-  update: (req, res) => {},
+  update: (req, res) => {
+    console.log('~>Reached the Update EndPoint');
+
+    const { id } = req.params;
+    const { name, group, url } = req.body;
+
+    console.log(` :: Param Id: ${id}`);
+    console.log(` :: Body ${name},${group},${url}`);
+
+    let index = data.findIndex((e) => e.id === parseInt(id));
+
+    console.log(` :: Found Index: ${index}`);
+
+    if (index >= 0) {
+      let record = {
+        id: data[index].id,
+        name: name || data[index].name,
+        group: group || data[index].group,
+        url: url || data[index].url,
+      };
+      data[index] = record;
+      res.status(200).send(data);
+    } else {
+      res.sendStatus(404);
+      console.log(' :: Could not update record');
+    }
+  },
   delete: (req, res) => {},
 };
