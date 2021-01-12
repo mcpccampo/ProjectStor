@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/../public/build'));
 
 // Server Api Routes
 app.get('/api/resources', ctrResources.read);
+app.get('/api/resources/query', ctrResources.query)
 app.post('/api/resources', ctrResources.create);
 app.post('/api/resources/:id', ctrResources.update);
 app.delete('/api/resources/:id', ctrResources.delete);
