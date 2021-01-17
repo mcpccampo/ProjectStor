@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
-class Research extends Component {
+import PostView from './PostView';
+class Post extends Component {
   constructor(props) {
     super(props);
     this.state = { data: [] };
@@ -8,10 +8,10 @@ class Research extends Component {
   render() {
     return (
       <div>
-        <h1>Research Component</h1>
+        <PostView />
       </div>
-    );
+    )
   }
 }
 
-export default Research;
+export default Post;

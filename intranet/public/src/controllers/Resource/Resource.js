@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import ResourceView from './ResourceView'
 
-class Research extends Component {
+class Resource extends Component {
   constructor(props) {
     super(props);
     this.state = { data: [] };
@@ -8,10 +9,10 @@ class Research extends Component {
   render() {
     return (
       <div>
-        <h1>Research Component</h1>
+        <ResourceView />
       </div>
     );
   }
 }
 
-export default Research;
+export default Resource;

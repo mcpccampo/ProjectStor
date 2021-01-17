@@ -1,7 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  background-color: ghostwhite;
+.container {
+  padding: 25px;
+  border: 1px solid gray;
+  margin-top: 10px;
 }
