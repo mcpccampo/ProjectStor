@@ -6,8 +6,8 @@ module.exports = {
   create: (req, res) => {
     console.log('~>Reached the Create EndPoint');
 
-    let { name, group, url } = req.body;
-    let record = { id, name, group, url };
+    let { title, group, url } = req.body;
+    let record = { id, title, group, url };
 
     data.push(record);
     id++;
@@ -27,7 +27,7 @@ module.exports = {
 
     if (query) {
       const filteredData = resourceData.filter((e) =>
-        e.name.toLowerCase().includes(query.toLowerCase())
+        e.title.toLowerCase().includes(query.toLowerCase())
       );
       if (filteredData && filteredData.length) {
         return res.status(200).send(filteredData);
@@ -41,10 +41,10 @@ module.exports = {
     console.log('~>Reached the Update EndPoint');
 
     const { id } = req.params;
-    const { name, group, url } = req.body;
+    const { title, group, url } = req.body;
 
     // console.log(` :: Param Id: ${id}`);
-    // console.log(` :: Body ${name},${group},${url}`);
+    // console.log(` :: Body ${title},${group},${url}`);
 
     let index = data.findIndex((e) => e.id === parseInt(id));
 
@@ -53,7 +53,7 @@ module.exports = {
     if (index >= 0) {
       let record = {
         id: data[index].id,
-        name: name || data[index].name,
+        title: title || data[index].title,
         group: group || data[index].group,
         url: url || data[index].url,
       };

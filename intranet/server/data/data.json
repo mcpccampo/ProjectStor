@@ -1,61 +1,61 @@
 [
   {
     "id": 0,
-    "name": "Git Hub",
+    "title": "Git Hub",
     "group": "Resources",
     "url": "https://github.com/"
   },
   {
     "id": 1,
-    "name": "MDN JS Library",
+    "title": "MDN JS Library",
     "group": "Resources",
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects"
   },
   {
     "id": 2,
-    "name": "BootStrap Docs",
+    "title": "BootStrap Docs",
     "group": "Resources",
     "url": "https://getbootstrap.com/docs/5.0/getting-started/introduction/"
   },
   {
     "id": 3,
-    "name": "TailWindCss Docs",
+    "title": "TailWindCss Docs",
     "group": "Resources",
     "url": " https://tailwindcss.com/docs"
   },
   {
     "id": 4,
-    "name": "React Docs",
+    "title": "React Docs",
     "group": "Resources",
     "url": "https://reactjs.org/docs/getting-started.html"
   },
   {
     "id": 5,
-    "name": "Express Boilerplate",
+    "title": "Express Boilerplate",
     "group": "Resources",
     "url": "https://bit.ly/3bpsZtC"
   },
   {
     "id": 6,
-    "name": "DevDocs",
+    "title": "DevDocs",
     "group": "Resources",
     "url": "https://devdocs.io/"
   },
   {
     "id": 7,
-    "name": "Dev Community",
+    "title": "Dev Community",
     "group": "Blogs",
     "url": "https://dev.to/"
   },
   {
     "id": 8,
-    "name": "FrontEnd Mentor Challenges",
+    "title": "FrontEnd Mentor Challenges",
     "group": "Tutorials",
     "url": "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp"
   },
   {
     "id": 9,
-    "name": "Brad Traversy",
+    "title": "Brad Traversy",
     "group": "Tutorials",
     "url": "https://www.youtube.com/c/TraversyMedia/videos"
   }

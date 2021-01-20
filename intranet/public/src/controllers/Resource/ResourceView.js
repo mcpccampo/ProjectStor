@@ -5,14 +5,11 @@ const ResourceView = (prop) => {
   return (
     <div className="resource_component">
       <div className="well">
-        <p>Some text..</p>
+        <p>Link1</p>
+        <p>Link2</p>
+        <p>Link3</p>
       </div>
-      <div className="well">
-        <p>Upcoming Events..</p>
-      </div>
-      <div className="well">
-        <p>Visit Our Blog</p>
-      </div>
+
     </div>
   );
 };

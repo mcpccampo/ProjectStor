@@ -12,11 +12,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      formData: {},
       resources: [],
       posts: [],
       showForm: false,
     };
     this.showForm = this.showForm.bind(this);
+    this.addContent = this.addContent.bind(this);
   }
 
   showForm() {
@@ -24,6 +26,10 @@ class App extends Component {
     this.setState({
       showForm: this.state.showForm ? false : true,
     });
+  }
+
+  addContent() {
+    // name,group,url
   }
 
   render() {
