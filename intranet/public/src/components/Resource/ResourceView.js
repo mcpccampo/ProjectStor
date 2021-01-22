@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './resource.css';
 
 const ResourceView = (props) => {
@@ -6,12 +6,13 @@ const ResourceView = (props) => {
 
   const resources = resourceData.map((element) => {
     return (
-      <div>
-        <p>{element.title}</p>
-        <i className="bi-alarm"></i>
+      <div key={element.id}>
         <a href={element.url} rel="noreferrer" target="_blank">
-          Click
+          {element.title}
         </a>
+        <span> -> </span>
+        <button>Edit</button>
+        <button onClick={(e) => props.resourceDelete(element.id)}>Delete</button>
       </div>
     );
   });

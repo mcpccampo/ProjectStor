@@ -3,3 +3,7 @@
   border: 1px solid gray;
   margin-top: 10px;
 }
+
+.hidden {
+  display: none;
+}

@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import './reset.css';
 import './App.css';
 
-import Header from './controllers/Header/Header';
-import Post from './controllers/Post/Post';
-import Form from './controllers/Form/Form';
-import Resource from './controllers/Resource/Resource';
+import Header from './components/Header/Header';
+import Post from './components/Post/Post';
+import Form from './components/Form/Form';
+import Resource from './components/Resource/Resource';
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +22,6 @@ class App extends Component {
   }
 
   showForm() {
-    console.log('event triggered');
     this.setState({
       showForm: this.state.showForm ? false : true,
     });
@@ -42,11 +41,11 @@ class App extends Component {
               <Post />
             </div>
             <div className="col-sm-4">
-              <div className={this.state.showForm ? 'd-none' : ''}>
+              <div className={this.state.showForm ? 'hidden' : ''}>
                 <Resource />
               </div>
 
-              <div className={this.state.showForm ? '' : 'd-none'}>
+              <div className={this.state.showForm ? '' : 'hidden'}>
                 <Form />
               </div>
             </div>

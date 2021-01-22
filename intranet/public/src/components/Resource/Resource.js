@@ -6,6 +6,7 @@ class Resource extends Component {
   constructor(props) {
     super(props);
     this.state = { data: [] };
+    this.deleteData = this.deleteData.bind(this);
   }
 
   componentDidMount() {
@@ -13,7 +14,17 @@ class Resource extends Component {
   }
 
   getData() {
+    console.log('Pulling Data from API...');
     axios.get('http://localhost:3050/api/resources').then((res) => {
+      this.setState({
+        data: res.data,
+      });
+    });
+  }
+
+  deleteData(id) {
+    console.log('Sending Delete Command to API...');
+    axios.delete(`http://localhost:3050/api/resources/${id}`).then((res) => {
       this.setState({
         data: res.data,
       });
@@ -23,7 +34,7 @@ class Resource extends Component {
   render() {
     return (
       <div>
-        <ResourceView resourceData={this.state.data} />
+        <ResourceView resourceData={this.state.data} resourceDelete={this.deleteData} />
       </div>
     );
   }
