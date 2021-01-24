@@ -5,20 +5,15 @@ import axios from 'axios';
 class Resource extends Component {
   constructor(props) {
     super(props);
-    this.state = { data: [] };
+    this.state = {
+      data: [],
+    };
     this.deleteData = this.deleteData.bind(this);
   }
 
   componentDidMount() {
-    this.getData();
-  }
-
-  getData() {
-    console.log('Pulling Data from API...');
-    axios.get('http://localhost:3050/api/resources').then((res) => {
-      this.setState({
-        data: res.data,
-      });
+    this.setState({
+      data: [...this.props.data],
     });
   }
 

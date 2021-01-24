@@ -17,10 +17,6 @@ class Form extends Component {
     });
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-  }
-
   render() {
     return (
       <div className="form_component">
@@ -55,7 +51,7 @@ class Form extends Component {
         <br />
         <br />
 
-        <input type="submit" value="submit" />
+        <input type="submit" value="submit" onClick={(e) => this.props.addContent(this.state)} />
       </div>
     );
   }
