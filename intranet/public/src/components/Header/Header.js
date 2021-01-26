@@ -7,9 +7,9 @@ const Header = (props) => {
         <div className="container">
           <span>Resources</span>
           <div>
-            <button onClick={(e) => props.showForm()}>
-              Add
-            </button>
+            <button onClick={(e) => props.showForm()}>New Resource</button>
+            <span> - </span>
+            <button>New Post</button>
           </div>
         </div>
       </nav>

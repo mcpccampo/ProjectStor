@@ -11,7 +11,7 @@ const ResourceView = (props) => {
           {element.title}
         </a>
         <span> -> </span>
-        <button>Edit</button>
+        <button onClick={(e) => props.resourceUpdate(element)}>Edit</button>
         <button onClick={(e) => props.resourceDelete(element.id)}>Delete</button>
       </div>
     );

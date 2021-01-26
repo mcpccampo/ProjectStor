@@ -17,8 +17,18 @@ class Form extends Component {
     });
   }
 
+  onFormSubmit(event) {
+    event.preventDefault();
+    this.props.addContent(this.state);
+    this.setState({
+      title: '',
+      group: '',
+      url: '',
+    });
+  }
+
   render() {
-    return (
+    const render = this.props.showForm ? (
       <div className="form_component">
         <label>
           Title:
@@ -51,9 +61,12 @@ class Form extends Component {
         <br />
         <br />
 
-        <input type="submit" value="submit" onClick={(e) => this.props.addContent(this.state)} />
+        <input type="submit" value="submit" onClick={(e) => this.onFormSubmit(e)} />
       </div>
+    ) : (
+      ''
     );
+    return <div>{render}</div>;
   }
 }
 
