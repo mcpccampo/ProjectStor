@@ -10,9 +10,9 @@ const ResourceView = (props) => {
         <a href={element.url} rel="noreferrer" target="_blank">
           {element.title}
         </a>
-        <span> -> </span>
-        <button onClick={(e) => props.resourceUpdate(element)}>Edit</button>
-        <button onClick={(e) => props.resourceDelete(element.id)}>Delete</button>
+        <span> - </span>
+        <button onClick={() => props.selectedData(element)}>Edit</button>
+        <button onClick={() => props.resourceDelete(element.id)}>Delete</button>
       </div>
     );
   });

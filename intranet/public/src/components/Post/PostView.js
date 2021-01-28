@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './post.css'
+import React from 'react';
+import './post.css';
 
 const PostView = (props) => {
   return (

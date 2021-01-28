@@ -5,7 +5,6 @@ const Header = (props) => {
     <div>
       <nav>
         <div className="container">
-          <span>Resources</span>
           <div>
             <button onClick={(e) => props.showForm()}>New Resource</button>
             <span> - </span>
