@@ -6,8 +6,8 @@ module.exports = {
   create: (req, res) => {
     console.log('~>Reached the Create EndPoint');
 
-    let { title, group, url } = req.body;
-    let record = { id, title, group, url };
+    let { img, title, group, url, post } = req.body;
+    let record = { id, img, title, group, url, post };
 
     data.push(record);
     id++;
@@ -41,7 +41,7 @@ module.exports = {
     console.log('~>Reached the Update EndPoint');
 
     const { id } = req.params;
-    const { title, group, url } = req.body;
+    const { img, title, group, url, post } = req.body;
 
     // console.log(` :: Param Id: ${id}`);
     // console.log(` :: Body ${title},${group},${url}`);
@@ -53,9 +53,11 @@ module.exports = {
     if (index >= 0) {
       let record = {
         id: data[index].id,
+        img: img || data[index].img,
         title: title || data[index].title,
         group: group || data[index].group,
         url: url || data[index].url,
+        post: post || data[index].post
       };
       data[index] = record;
       res.status(200).send(data);

@@ -100,8 +100,9 @@ class Resource extends Component {
         <div className="row">
           <div className={this.props.showForm ? 'form-container' : 'hidden'}>
             <div className="form_component">
+              <h1>Resource</h1>
               <label>
-                Title:
+                |-- Title:
                 <input
                   name="title"
                   value={this.state.title}
@@ -111,7 +112,7 @@ class Resource extends Component {
               <br />
 
               <label>
-                Group:
+                |-- Group: 
                 <select
                   name="group"
                   value={this.state.group}
@@ -119,13 +120,13 @@ class Resource extends Component {
                 >
                   <option>- Select -</option>
                   <option>Resources</option>
-                  <option>Post</option>
+                  {/* <option>Post</option> */}
                 </select>
               </label>
               <br />
 
               <label>
-                URL:
+                |-- URL: 
                 <input
                   name="url"
                   value={this.state.url}

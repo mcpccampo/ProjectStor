@@ -11,28 +11,36 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showForm: false,
+      showResourceForm: false,
+      showPostForm: false,
     };
-    this.showForm = this.showForm.bind(this);
+    this.showResourceForm = this.showResourceForm.bind(this);
+    this.showPostForm = this.showPostForm.bind(this);
   }
 
-  showForm() {
+  showResourceForm() {
     this.setState({
-      showForm: this.state.showForm ? false : true,
+      showResourceForm: this.state.showResourceForm ? false : true,
+    });
+  }
+
+  showPostForm() {
+    this.setState({
+      showPostForm: this.state.showPostForm ? false : true,
     });
   }
 
   render() {
     return (
       <div className="app">
-        <Header showForm={this.showForm} />
+        <Header showResourceForm={this.showResourceForm} showPostForm={this.showPostForm} />
         <div className="container">
           <div className="row">
             <div className="col-sm-6">
-              <Post />
+              <Post showForm={this.state.showPostForm} />
             </div>
             <div className="col-sm-6">
-              <Resource showForm={this.state.showForm} deleteData={this.deleteData} />
+              <Resource showForm={this.state.showResourceForm} />
             </div>
           </div>
         </div>

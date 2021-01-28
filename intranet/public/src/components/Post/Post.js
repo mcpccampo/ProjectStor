@@ -4,14 +4,18 @@ import PostView from './PostView';
 class Post extends Component {
   constructor(props) {
     super(props);
-    this.state = { data: [] };
+    this.state = {
+      data: [],
+    };
   }
   render() {
     return (
-      <div>
-        <PostView />
+      <div className="container">
+        <div className="row">
+          <PostView />
+        </div>
       </div>
-    )
+    );
   }
 }
 

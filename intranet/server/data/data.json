@@ -43,20 +43,26 @@
   },
   {
     "id": 7,
+    "img": "",
     "title": "Dev Community",
     "group": "Post",
+    "post": "",
     "url": "https://dev.to/"
   },
   {
     "id": 8,
+    "img": "",
     "title": "FrontEnd Mentor Challenges",
     "group": "Post",
+    "post": "",
     "url": "https://www.youtube.com/playlist?list=PLgBH1CvjOA63Xvt0BaeQ7zL4KXX96Wbgp"
   },
   {
     "id": 9,
+    "img": "",
     "title": "Brad Traversy",
     "group": "Post",
+    "post": "",
     "url": "https://www.youtube.com/c/TraversyMedia/videos"
   }
 ]

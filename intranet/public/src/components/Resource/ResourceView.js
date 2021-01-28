@@ -4,7 +4,7 @@ import './resource.css';
 const ResourceView = (props) => {
   const resourceData = [...props.resourceData];
 
-  const resources = resourceData.map((element) => {
+  const resources = resourceData.filter(element => element.group === 'Resources').map((element) => {
     return (
       <div key={element.id}>
         <a href={element.url} rel="noreferrer" target="_blank">

@@ -6,9 +6,9 @@ const Header = (props) => {
       <nav>
         <div className="container">
           <div>
-            <button onClick={(e) => props.showForm()}>New Resource</button>
+            <button onClick={(e) => props.showResourceForm()}>New Resource</button>
             <span> - </span>
-            <button>New Post</button>
+            <button onClick={(e) => props.showPostForm()}>New Post</button>
           </div>
         </div>
       </nav>
