@@ -15,6 +15,7 @@ class Resource extends Component {
     this.readContent = this.readContent.bind(this);
     this.deleteData = this.deleteData.bind(this);
     this.addContent = this.addContent.bind(this);
+
     this.updateContent = this.updateContent.bind(this);
     this.selectedData = this.selectedData.bind(this);
   }
@@ -23,27 +24,39 @@ class Resource extends Component {
     this.readContent();
   }
 
+  // crud Events
+
   readContent() {
     console.log('Reading data from API');
-    axios.get('http://localhost:3050/api/resources').then((res) => {
-      this.setState({
-        data: [...res.data],
+    axios
+      .get('http://localhost:3050/api/resources')
+      .then((res) => {
+        this.setState({
+          data: [...res.data],
+        });
+      })
+      .catch((err) => {
+        console.log(`Error While Reading API Data ... ${err}`);
       });
-    });
   }
 
   addContent(data) {
-    console.log('Adding contect to API...');
-    axios.post('http://localhost:3050/api/resources', data).then((res) => {
-      this.setState({
-        data: [...res.data],
+    console.log('Adding content to API...');
+    axios
+      .post('http://localhost:3050/api/resources', data)
+      .then((res) => {
+        this.setState({
+          data: [...res.data],
+        });
+      })
+      .catch((err) => {
+        console.log(`Error While Adding content to API... ${err}`);
       });
-    });
   }
 
   updateContent(event) {
     event.preventDefault();
-    console.log('Updating content...');
+    console.log('Updating content to API...');
     const { id, title, group, url } = this.state;
     if (this.state.id !== '') {
       axios
@@ -71,7 +84,7 @@ class Resource extends Component {
     });
   }
 
-  // form controls
+  // form events
 
   handleChange(event) {
     this.setState({
@@ -90,16 +103,17 @@ class Resource extends Component {
   }
 
   selectedData(data) {
-    console.log('Selected Data for Form...', data);
+    console.log('Selected Resource for Form...', data);
     this.setState({ ...data });
   }
 
   render() {
     return (
       <div className="container">
+        <h1>Link Directory</h1>
         <div className="row">
           <div className={this.props.showForm ? 'form-container' : 'hidden'}>
-            <div className="form_component">
+            <div className="form-container">
               <h1>Resource</h1>
               <label>
                 |-- Title:
@@ -112,7 +126,7 @@ class Resource extends Component {
               <br />
 
               <label>
-                |-- Group: 
+                |-- Group:
                 <select
                   name="group"
                   value={this.state.group}
@@ -126,7 +140,7 @@ class Resource extends Component {
               <br />
 
               <label>
-                |-- URL: 
+                |-- URL:
                 <input
                   name="url"
                   value={this.state.url}

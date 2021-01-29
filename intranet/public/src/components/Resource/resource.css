@@ -1,5 +1,4 @@
 .resource_component {
-  border: 1px dashed black;
   padding: 10px;
   margin-top: 10px;
 }
@@ -8,3 +7,30 @@
   display: none;
 }
 
+a:link {
+  color: #191970;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #191970;
+}
+
+a:hover {
+  color: gray;
+}
+
+a:active {
+  color: #191970;
+}
+
+.url-container {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.url-container button {
+  margin-right: 5px;
+}

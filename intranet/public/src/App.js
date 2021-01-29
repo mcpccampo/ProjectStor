@@ -35,14 +35,8 @@ class App extends Component {
       <div className="app">
         <Header showResourceForm={this.showResourceForm} showPostForm={this.showPostForm} />
         <div className="container">
-          <div className="row">
-            <div className="col-sm-6">
-              <Post showForm={this.state.showPostForm} />
-            </div>
-            <div className="col-sm-6">
-              <Resource showForm={this.state.showResourceForm} />
-            </div>
-          </div>
+          <Resource showForm={this.state.showResourceForm} />
+          <Post showForm={this.state.showPostForm} />
         </div>
       </div>
     );
